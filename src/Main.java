@@ -20,10 +20,12 @@ public class Main {
             switch (trainType) {
                 case "PASSENGER":
                     limitOfCars = PASSENGER_CAR_CAPACITY;
+                    factory = new PassengerCarriageFactory();
                     System.out.println("Allowed quantity of the cars for Passenger Train: 1-30");
                     break;
                 case "CARGO":
                     limitOfCars = FREIGHT_CAR_CAPACITY;
+                    factory = new CargoCarriageFactory();
                     System.out.println("Allowed quantity of the cars for Cargo Train: 1-70");
                     break;
                 default:
@@ -43,10 +45,6 @@ public class Main {
             e.printStackTrace();
         }
 
-        if (trainType.toUpperCase().equals("CARGO")) {
-            factory = new CargoCarriageFactory();
-        } else if (trainType.toUpperCase().equals("PASSENGER"))
-            factory = new PassengerCarriageFactory();
         generateRandomTrain(factory, quantity);
 
         if (!cargoTrain.isEmpty()) {
