@@ -1,3 +1,3 @@
-class RestaurantCar extends Carriage{
+class RestaurantCar extends Carriage {
 
 }

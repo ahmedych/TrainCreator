@@ -1,2 +1,2 @@
-public class MailCar extends Carriage{
+class MailCar extends Carriage {
 }
